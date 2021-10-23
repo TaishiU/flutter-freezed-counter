@@ -17,10 +17,9 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$CounterStateTearOff {
   const _$CounterStateTearOff();
 
-  _CounterState call({int count = 0, int count10 = 0}) {
+  _CounterState call({int count = 0}) {
     return _CounterState(
       count: count,
-      count10: count10,
     );
   }
 }
@@ -31,7 +30,6 @@ const $CounterState = _$CounterStateTearOff();
 /// @nodoc
 mixin _$CounterState {
   int get count => throw _privateConstructorUsedError;
-  int get count10 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CounterStateCopyWith<CounterState> get copyWith =>
@@ -43,7 +41,7 @@ abstract class $CounterStateCopyWith<$Res> {
   factory $CounterStateCopyWith(
           CounterState value, $Res Function(CounterState) then) =
       _$CounterStateCopyWithImpl<$Res>;
-  $Res call({int count, int count10});
+  $Res call({int count});
 }
 
 /// @nodoc
@@ -57,16 +55,11 @@ class _$CounterStateCopyWithImpl<$Res> implements $CounterStateCopyWith<$Res> {
   @override
   $Res call({
     Object? count = freezed,
-    Object? count10 = freezed,
   }) {
     return _then(_value.copyWith(
       count: count == freezed
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as int,
-      count10: count10 == freezed
-          ? _value.count10
-          : count10 // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -79,7 +72,7 @@ abstract class _$CounterStateCopyWith<$Res>
           _CounterState value, $Res Function(_CounterState) then) =
       __$CounterStateCopyWithImpl<$Res>;
   @override
-  $Res call({int count, int count10});
+  $Res call({int count});
 }
 
 /// @nodoc
@@ -95,16 +88,11 @@ class __$CounterStateCopyWithImpl<$Res> extends _$CounterStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? count = freezed,
-    Object? count10 = freezed,
   }) {
     return _then(_CounterState(
       count: count == freezed
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
-              as int,
-      count10: count10 == freezed
-          ? _value.count10
-          : count10 // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -113,18 +101,15 @@ class __$CounterStateCopyWithImpl<$Res> extends _$CounterStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_CounterState implements _CounterState {
-  const _$_CounterState({this.count = 0, this.count10 = 0});
+  const _$_CounterState({this.count = 0});
 
   @JsonKey(defaultValue: 0)
   @override
   final int count;
-  @JsonKey(defaultValue: 0)
-  @override
-  final int count10;
 
   @override
   String toString() {
-    return 'CounterState(count: $count, count10: $count10)';
+    return 'CounterState(count: $count)';
   }
 
   @override
@@ -132,16 +117,12 @@ class _$_CounterState implements _CounterState {
     return identical(this, other) ||
         (other is _CounterState &&
             (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)) &&
-            (identical(other.count10, count10) ||
-                const DeepCollectionEquality().equals(other.count10, count10)));
+                const DeepCollectionEquality().equals(other.count, count)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(count10);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(count);
 
   @JsonKey(ignore: true)
   @override
@@ -150,12 +131,10 @@ class _$_CounterState implements _CounterState {
 }
 
 abstract class _CounterState implements CounterState {
-  const factory _CounterState({int count, int count10}) = _$_CounterState;
+  const factory _CounterState({int count}) = _$_CounterState;
 
   @override
   int get count => throw _privateConstructorUsedError;
-  @override
-  int get count10 => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CounterStateCopyWith<_CounterState> get copyWith =>

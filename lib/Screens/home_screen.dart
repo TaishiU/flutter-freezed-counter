@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:freezed_counter/counter_state.dart';
+import 'package:freezed_counter/StateManagement/counter_state.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HomeScreen extends HookWidget {
@@ -9,13 +9,12 @@ class HomeScreen extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final countState = useProvider(counterProvider);
-    // final CounterState? data =
-    //     useProvider(counterProvider.select((value) => value));
 
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Home'),
+        title: const Text('HomeScreen'),
       ),
       body: Center(
         child: Column(

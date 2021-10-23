@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:freezed_counter/home_screen.dart';
+import 'package:freezed_counter/Screens/feed_screen.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const FeedScreen(),
     );
   }
 }
