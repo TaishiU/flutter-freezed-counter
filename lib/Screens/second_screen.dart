@@ -15,7 +15,7 @@ class SecondScreen extends HookWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('SecondScreen'),
+        title: const Text('体重管理'),
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(
