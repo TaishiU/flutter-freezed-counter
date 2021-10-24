@@ -12,7 +12,7 @@ abstract class BottomTabState with _$BottomTabState {
 
 class BottomTabController extends StateNotifier<BottomTabState> {
   BottomTabController() : super(const BottomTabState());
-  void update(index) => state = state.copyWith(
+  void update(int index) => state = state.copyWith(
         index: index,
       );
 }
